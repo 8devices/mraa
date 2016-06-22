@@ -49,6 +49,8 @@ typedef enum {
     MRAA_96BOARDS = 9,            /**< Linaro 96boards */
     MRAA_INTEL_SOFIA_3GR = 10,      /**< The Intel SoFIA 3GR */
     MRAA_INTEL_CHERRYHILLS = 11,     /**< The Intel Braswell Cherryhills */
+    MRAA_VOCORE = 12,                /**< The VoCore v1.0 */
+    MRAA_QCA_8DEVICES = 13,          /**< Qualcomm based 8devices boards */
     MRAA_UP = 12,                    /**< The UP Board */
 
     // USB platform extenders start at 256

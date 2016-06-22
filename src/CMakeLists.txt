@@ -81,6 +81,12 @@ set (mraa_LIB_ARM_SRCS_NOAUTO
   ${PROJECT_SOURCE_DIR}/src/arm/banana.c
 )
 
+set (mraa_LIB_MIPS_SRCS_NOAUTO
+  ${PROJECT_SOURCE_DIR}/src/mips/mips.c
+  ${PROJECT_SOURCE_DIR}/src/mips/8devices.c
+  ${PROJECT_SOURCE_DIR}/src/mips/vocore.c
+)
+
 set (mraa_LIBS ${CMAKE_THREAD_LIBS_INIT})
 
 if (X86PLAT)
@@ -91,6 +97,11 @@ endif()
 if (ARMPLAT)
   add_subdirectory(arm)
   set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DARMPLAT=1")
+endif()
+
+if (MIPSPLAT)
+  add_subdirectory(mips)
+  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DMIPSPLAT=1")
 endif()
 
 if (USBPLAT)
